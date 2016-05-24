@@ -29,6 +29,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form'
+gem 'devise'
 
 gem 'rails_12factor', group: :production
 
