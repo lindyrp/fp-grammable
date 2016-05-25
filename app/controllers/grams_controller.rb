@@ -1,5 +1,5 @@
 class GramsController < ApplicationController
-  
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
   end
@@ -9,8 +9,13 @@ class GramsController < ApplicationController
   end
 
   def create
-    @gram = Gram.create(gram_params)
-    redirect_to root_path
+    @gram = current_user.grams.create(gram_params)
+
+    if @gram.valid?
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
 
