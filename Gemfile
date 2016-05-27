@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form'
 gem 'devise'
+gem 'carrierwave'
+gem 'figaro'
+gem 'fog'
 
 gem 'rails_12factor', group: :production
 
