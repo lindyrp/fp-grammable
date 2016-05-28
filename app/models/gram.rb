@@ -7,9 +7,9 @@ class Gram < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
-
-  def self.convert(units="kilogram")
-    return units
-  end
+# Model Test demo from mentor session, just keeping it here for reference for now
+  # def self.convert(units="kilogram")
+  #   return units
+  # end
 
 end
